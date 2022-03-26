@@ -1,0 +1,263 @@
+ 
+ ​#Pesquisar por Cargo 
+ ​#será pesquisado na página inicial o cargo desejado 
+ ​def CT_0011(): 
+ ​  #PASSO 1: pesquisar por cargo, será preenchido o espaço para ser feita a pesquisa 
+ ​  elem = driver.find_element_by_name('//*[@id="input-41206"]') 
+ ​  elem.send_keys('motorista') 
+ ​   
+ ​  #PASSO 2: clicar no botão de pesquisar. 
+ ​  elem = driver.find_element_by_name('//*[@id="__next"]/section[1]/div/div/div[2]/section/div/form/button') 
+ ​  elem.click() 
+ ​   
+ ​  #sistema deve retornar com a vaga desejada 
+ ​  return none 
+ ​   
+ ​#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# 
+  
+ ​#Login 
+ ​#Será feito o login do usuário   
+ ​def CT_0012(): 
+ ​   
+ ​   
+ ​  #PASSO 1 clicar no menu 
+ ​  elem = diver.find_element_by_name('//*[@id="HeaderMenuButton"]/svg') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 2 Clicar no botão de login 
+ ​  elem = driver.find_element_by_name('//*[@id="__next"]/div[2]/header/div/div/div[2]/div/div[2]/a[2]') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 3 inserir user. 
+ ​  elem = driver.find_element_by_name('//*[@id="input-2343410"]') 
+ ​  elem.send_keys('clebercaio12345@gmail.com') 
+  
+ ​   
+ ​  #PASSO 4 inserir senha. 
+ ​  elem = driver.find_element_by_name('//*[@id="input-2343411"]') 
+ ​  elem.send_keys('Cleber194t%') 
+ ​   
+ ​  #PASSO 5 clicar no botão. 
+ ​  elem = driver.find_element_by_name('//*[@id="__next"]/div/div/main/div/div/div/div/article/div/form/button') 
+ ​  elem.click() 
+ ​   
+ ​  #Deve ser feito o login completo 
+ ​  return None 
+ ​   
+ ​#~~~~~~~~~~~~~~~~~~~# 
+ ​#Ver todas as vagas 
+ ​#será exibida todas as vagas disponíveis  
+ ​def CT_0013(): 
+ ​  #PASSO 1 ver todas as vagas ao clicar 
+ ​  elem = driver.find_element_by_name('//*[@id="__next"]/div[4]/div[2]/div/button') 
+ ​  elem.click()   
+ ​   
+ ​  #Deve aparecer todas as vagas. 
+ ​  
+ ​#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# 
+ ​#Pesquisar por vaga 
+ ​#será feita a busca pelo filtro 
+ ​def CT_0014(): 
+ ​  #PASSO 1 clicar em ver todas as vagas 
+ ​  elem = driver.find_element_by_name('//*[@id="__next"]/div[4]/div[2]/div/button') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 2 procurar profissão 
+ ​  elem = driver.find_element_by_name('//*[@id="keyword"]') 
+ ​  elem.send_keys('auxiliar administrativo') 
+ ​  
+ ​  #PASSO 3 Pesquisar profissão  
+ ​  elem = driver.find_element_by_name('//*[@id="search-box"]/div/form/button[2]') 
+ ​  elem.click() 
+ ​   
+ ​  #Deve aparecer todas as vagas referentes a essa profissão 
+ ​    
+ ​   
+ ​#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# 
+ ​#Criar conta 
+ ​#deve ser criada a conta do usuário.  
+ ​def CT_0015(): 
+ ​  #PASSO 1 clicar no menu 
+ ​  elem = diver.find_element_by_name('//*[@id="HeaderMenuButton"]/svg') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 2 Clicar no botão de login 
+ ​  elem = driver.find_element_by_name('//*[@id="__next"]/div[2]/header/div/div/div[2]/div/div[2]/a[2]') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 3 Clicar para fazer cadastro 
+ ​  elem = driver.find_element_by_name('//*[@id="__next"]/div/div/main/div/div/div/div/article/footer/a') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 4 Colocar nome para cadastro 
+ ​  elem = driver.find_element_by_name('//*[@id="input-0"]') 
+ ​  elem.send_keys('matheus do maranhão') 
+ ​   
+ ​  #PASSO 5 Colocar Email para cadastro 
+ ​  elem = driver.find_element_by_name('//*[@id="input-1"]') 
+ ​  elem.send_keys('mateusdomaranhãoaraujo@gmail.com') 
+ ​   
+ ​  #PASSO 6 Colocar o número de telefone 
+ ​  elem = driver.find_element_by_name('//*[@id="input-2"]') 
+ ​  elem.send_keys('98991564222') 
+ ​   
+ ​  #PASSO 7 Aceitar termos 
+ ​  elem = driver.find_element_by_name('//*[@id="__next"]/div/div/div/div/section/div[2]/div/div/div/form/div[4]/div/input') 
+ ​  elem.click()  
+ ​   
+ ​  #PASSO 8 Submeter 
+ ​  elem = driver.find_element_by_mame('//*[@id="submit-step"]') 
+ ​  elem.click()   
+ ​   
+ ​  #PASSO 9 Criar senha 
+ ​  elem = driver.find_element_by_name('//*[@id="input-3"]') 
+ ​  elem.send_keys('Mateus1358t%') 
+ ​   
+ ​  #PASSO 10 Submeter senha 
+ ​  elem = driver.find_element_by_name('//*[@id="submit-step"]') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 11 Escolher cargo 
+ ​  elem = driver.find_element_by_name('//*[@id="keyword"]') 
+ ​  elem.send_keys('Predeiro')   
+ ​   
+ ​  #PASSO 12 Escolher salário  
+ ​  elem = driver.find_element_by_name('//*[@id="dropdown-0"]') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 13E ESCOLHER 2 MIL COMO EXEMPLO 
+ ​  elem = driver.find_element_by_name('//*[@id="downshift-1-item-2"]') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 14 escolher região 
+ ​  elem = driver.find_element_by_name('//*[@id="dropdown-1"]') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 15 selecionar região Maranhão 
+ ​  elem = driver.find_element_by_name('//*[@id="downshift-2-item-9"]') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 16 escolher a cidade 
+ ​  elem = driver.find_element_by_name('//*[@id="dropdown-2"]') 
+ ​  elem.send_keys('São Luis') 
+ ​   
+ ​  #PASSO 17 Submeter inscrição 
+ ​  elem = driver.find_element_by_name('//*[@id="submit-final-step"]') 
+ ​  elem.click() 
+ ​  #Login deve ser concluido 
+ ​#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# 
+ ​#pesquisar por lugar 
+ ​#deve ser feita a busca por lugares, não por vagas 
+ ​def CT_0016: 
+ ​  #PASSO 1 clicar em ver todas as vagas 
+ ​  elem = driver.find_element_by_name('//*[@id="__next"]/div[4]/div[2]/div/button') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 2 procurar por lugar 
+ ​  elem = driver.find_element_by_name('//*[@id="location"]') 
+ ​  elem.send_keys('São Luis') 
+ ​   
+ ​  #PASSO 3 submeter 
+ ​   
+ ​  elem = driver.find_element_by_name('//*[@id="search-box"]/div/form/button[2]') 
+ ​  elem.click() 
+ ​   
+ ​  #Deve aparecer todas as vagas deste determinado lugar. 
+ ​#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# 
+ ​#Login com o user errado 
+ ​#o login não deverá ser efetuado por causa do erro 
+ ​def CT_0017(): 
+ ​  
+ ​   
+ ​  #PASSO 1 clicar no menu 
+ ​  elem = diver.find_element_by_name('//*[@id="HeaderMenuButton"]/svg') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 2 Clicar no botão de login 
+ ​  elem = driver.find_element_by_name('//*[@id="__next"]/div[2]/header/div/div/div[2]/div/div[2]/a[2]') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 3 inserir user. 
+ ​  elem = driver.find_element_by_name('//*[@id="input-2343410"]') 
+ ​  elem.send_keys('clebarcaio12345@gmail.com') 
+  
+ ​   
+ ​  #PASSO 4 inserir senha. 
+ ​  elem = driver.find_element_by_name('//*[@id="input-2343411"]') 
+ ​  elem.send_keys('Cleber194t%') 
+ ​   
+ ​  #PASSO 5 clicar no botão. 
+ ​  elem = driver.find_element_by_name('//*[@id="__next"]/div/div/main/div/div/div/div/article/div/form/button') 
+ ​  elem.click() 
+ ​  #Acesso deve ser negado 
+ ​#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# 
+ ​#criar conta com número invalido 
+ ​#a conta não pode ser criada com um número invalido 
+ ​def CT_0018(): 
+ ​   
+ ​    #PASSO 1 clicar no menu 
+ ​  elem = diver.find_element_by_name('//*[@id="HeaderMenuButton"]/svg') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 2 Clicar no botão de login 
+ ​  elem = driver.find_element_by_name('//*[@id="__next"]/div[2]/header/div/div/div[2]/div/div[2]/a[2]') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 3 Clicar para fazer cadastro 
+ ​  elem = driver.find_element_by_name('//*[@id="__next"]/div/div/main/div/div/div/div/article/footer/a') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 4 Colocar nome para cadastro 
+ ​  elem = driver.find_element_by_name('//*[@id="input-0"]') 
+ ​  elem.send_keys('Carlos Do Flamengo') 
+ ​   
+ ​  #PASSO 5 Colocar Email para cadastro 
+ ​  elem = driver.find_element_by_name('//*[@id="input-1"]') 
+ ​  elem.send_keys('flamengoevascodocarlos108@gmail.com') 
+ ​   
+ ​  #PASSO 6 Colocar o número de telefone 
+ ​  elem = driver.find_element_by_name('//*[@id="input-2"]') 
+ ​  elem.send_keys('98873667163') 
+ ​   
+ ​  #PASSO 7 Aceitar termos 
+ ​  elem = driver.find_element_by_name('//*[@id="__next"]/div/div/div/div/section/div[2]/div/div/div/form/div[4]/div/input') 
+ ​  elem.click()  
+ ​   
+ ​  #PASSO 8 Submeter 
+ ​  elem = driver.find_element_by_mame('//*[@id="submit-step"]') 
+ ​  elem.click()   
+ ​  #cadastro não é aceito por conter número inválido  
+ ​#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# 
+ ​#Pesquisar cidade com o nome errado 
+ ​#verificar se a cidade é encontrada mesmo com o nome errado 
+ ​def CT_0019(): 
+ ​  #PASSO 1 clicar em ver todas as vagas 
+ ​  elem = driver.find_element_by_name('//*[@id="__next"]/div[4]/div[2]/div/button') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 2 procurar por lugar 
+ ​  elem = driver.find_element_by_name('//*[@id="location"]') 
+ ​  elem.send_keys('Suam Luys') 
+ ​   
+ ​  #PASSO 3 submeter 
+ ​   
+ ​  elem = driver.find_element_by_name('//*[@id="search-box"]/div/form/button[2]') 
+ ​  elem.click() 
+ ​  #Cidade não deve ser encontrada 
+ ​#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# 
+ ​#pesquisar por nome do cargo incorreto 
+ ​#não deve aparecer o cargo referente 
+ ​def CT_0020(): 
+ ​  #PASSO 1 clicar em ver todas as vagas 
+ ​  elem = driver.find_element_by_name('//*[@id="__next"]/div[4]/div[2]/div/button') 
+ ​  elem.click() 
+ ​   
+ ​  #PASSO 2 procurar profissão 
+ ​  elem = driver.find_element_by_name('//*[@id="keyword"]') 
+ ​  elem.send_keys('auchiliar admeministrativu') 
+ ​  
+ ​  #PASSO 3 Pesquisar profissão  
+ ​  elem = driver.find_element_by_name('//*[@id="search-box"]/div/form/button[2]') 
+ ​  elem.click() 
+ ​   
+ ​  #Não deve aparecer o cargo
